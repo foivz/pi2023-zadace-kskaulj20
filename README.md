@@ -8,21 +8,21 @@ Molim vas izmijenite ovaj dokument kako biste u njemu naveli naziv i kratak opis
 A sada, vrijeme je za prvi korak rada na vašem projektu. 🙂 Za upis/opis vašeg programskog proizvoda molimo vas koristite **predložak** koji je naveden u nastavku. Započnite tako da kliknete na *olovku* u desnom gornjem kutu ovoga dokumenta te izbrišite sve što je iznad _Naziva projekta_, kao i sve upute koje su navedene u zagradama u predlošku ispod.
 
 # Naziv projekta
-(U redak iznad navedite naziv projekta koji ste dobili za analizu!)
+Softver Kadrovska služba u IT poduzeću
 
 ## Podaci o studentu
 (Ispod promijenite samo drugi redak tablice!)
 
 Ime i prezime | E-mail adresa (FOI) | JMBAG | Github korisničko ime
 ------------  | ------------------- | ----- | ---------------------
-Ime i prezime | mojaadresa@foi.hr | 000000000 | githubuser
+Klara Škaulj | kskaulj20@student.foi.hr | 0016150270 | kskaulj20
 
 
 ## Opis domene
-(Vlastitim riječima opišite domenu ili problem koji pokriva projekt vaše zadaće!)
+Softver se koristi od strane poduzeća s 250 zaposlenih. Koriste ga djelatnici, menadžeri te odjel za ljudske resurse. Glavna svrha je praćenje odsustva i prisustva zaposlenika.
 
 ## Specifikacija projekta
-(Vlastitim riječima opišite zahtjeve za izradu ovog programskog proizvoda!)
+Potrebno je kreirati tri vrste korisnika: djelatnik, menadžer i kadrovska. Djelatnici šalju zahtjeve za bolovanjem, godišnjim odmorom, konferencijama i usravršavanjima. Menadžeri zahtjeve pregledavaju te odbijaju, odnosno prihvaćaju. Zahtjevi koji su prihvaćeni proslijeđuju se kadrovskoj kako bi se napravila evidencija odsustva. 
 
 ## Zadatak
 (U root repozitorija učitajte zadatak koji ste dobili i potom ovdje stavite link na njegovo otvaranje!)
