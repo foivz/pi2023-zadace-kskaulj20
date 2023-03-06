@@ -25,7 +25,6 @@ Softver se koristi od strane poduzeća s 250 zaposlenih. Koriste ga djelatnici, 
 Potrebno je kreirati tri vrste korisnika: djelatnik, menadžer i kadrovska. Djelatnici šalju zahtjeve za bolovanjem, godišnjim odmorom, konferencijama i usravršavanjima. Menadžeri zahtjeve pregledavaju te odbijaju, odnosno prihvaćaju. Zahtjevi koji su prihvaćeni proslijeđuju se kadrovskoj kako bi se napravila evidencija odsustva. 
 
 ## Zadatak
-(U root repozitorija učitajte zadatak koji ste dobili i potom ovdje stavite link na njegovo otvaranje!)
 
 ## Resursi
 (Zadaće je obvezno predati u obliku Wiki stranica na ovom repozitoriju. Slike i druge artefakte koje ćete koristiti na wiki stranicama smjestite u mapu dokumentacije u repozitoriju!)
