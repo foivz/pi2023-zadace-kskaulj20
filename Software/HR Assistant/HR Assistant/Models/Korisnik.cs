@@ -8,7 +8,9 @@ namespace HR_Assistant.Models
 {
     public class Korisnik
     {
-        string kor_ime { get; set; }    
+        string kor_ime { get; set; } 
+        
+        string email { get; set; }
         string lozinka { get; set; }  
         
     }

@@ -1,5 +1,4 @@
-﻿using HR_Assistant.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,12 +10,11 @@ using System.Windows.Forms;
 
 namespace HR_Assistant
 {
-    public class Zaposlenik : Korisnik
+    public partial class LogIn : Form
     {
-        public bool CheckPassword(string Lozinka)
+        public LogIn()
         {
-            return Lozinka == Lozinka;
+            InitializeComponent();
         }
-
     }
 }

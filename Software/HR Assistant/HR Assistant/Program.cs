@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DBLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,7 +15,7 @@ namespace HR_Assistant
         [STAThread]
         static void Main()
         {
-
+            DB.SetConfiguration("31.147.204.119\\PISERVER,1433", "kskaulj20", "t&FRW]B1");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmLogIn());
