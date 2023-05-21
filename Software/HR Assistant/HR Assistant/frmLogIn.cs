@@ -26,5 +26,27 @@ namespace HR_Assistant
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (txtEmail.Text == "")
+            {
+                MessageBox.Show("Korisničko ime nije uneseno!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (txtLozinka.Text == "")
+            {
+                MessageBox.Show("Lozinka nije unesena!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void txtEmail_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void txtLozinka_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
     }
 }

@@ -41,6 +41,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(230, 22);
             this.txtEmail.TabIndex = 1;
+            this.txtEmail.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtEmail_MaskInputRejected);
             // 
             // txtLozinka
             // 
@@ -49,6 +50,7 @@
             this.txtLozinka.PasswordChar = '*';
             this.txtLozinka.Size = new System.Drawing.Size(230, 22);
             this.txtLozinka.TabIndex = 2;
+            this.txtLozinka.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtLozinka_MaskInputRejected);
             // 
             // label1
             // 
@@ -77,6 +79,7 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Prijava";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmLogIn
             // 
