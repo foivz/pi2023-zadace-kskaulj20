@@ -6,12 +6,24 @@ using System.Threading.Tasks;
 
 namespace HR_Assistant.Models
 {
-    public class Korisnik
-    {
-        string kor_ime { get; set; } 
-        
-        string email { get; set; }
-        string lozinka { get; set; }  
-        
+    public abstract class Korisnik
+    { 
+       public int Id { get; set; }    
+       public string Kor_ime { get; set; }
+
+        public string Email { get; set; }
+        public string Lozinka { get; set; }
+
+        public string Uloga { get; set; }   
+
+        public bool CheckPassword(string pwd)
+        {
+            return Lozinka == pwd;
+        }
+
+        public override string ToString()
+        {
+            return Kor_ime;
+        }
     }
 }

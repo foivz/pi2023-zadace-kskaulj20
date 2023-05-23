@@ -1,22 +1,28 @@
 ﻿using System;
+using DBLayer;
+using HR_Assistant.Models;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DBLayer;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace HR_Assistant.Repositories
 {
     public class RepozitorijZaposlenik
     {
 
-        public static Zaposlenik DohvatiZaposlenika(string email)
+        public static Zaposlenik DohvatiZaposlenika(string Email)
         {
-            string sql = $"SELECT * FROM Korisnici WHERE Id_Uloga = 1 && email = '{email}'";
+            string sql = $"SELECT * FROM Korisnici WHERE  email = '{Email}' ";
             return FetchZaposlenik(sql);
         }
+
+       /** public static Zaposlenik DohvatiZaposlenika(string Lozinka)
+        {
+            string sql = $"SELECT * FROM Korisnici WHERE  lozinka = '{Lozinka}' ";
+            return FetchZaposlenik(sql);
+        }**/
 
         private static Zaposlenik FetchZaposlenik(string sql)
         {
@@ -46,6 +52,10 @@ namespace HR_Assistant.Repositories
             var zaposlenik = new Zaposlenik
 
             {
+                Id = id, 
+                Email = email,
+                Lozinka = lozinka,
+                //Uloga = uloga;
                 
             };
             return zaposlenik;

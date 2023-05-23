@@ -15,10 +15,12 @@ namespace HR_Assistant
         [STAThread]
         static void Main()
         {
-            DB.SetConfiguration("31.147.204.119\\PISERVER,1433", "kskaulj20", "t&FRW]B1");
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            DB.SetConfiguration("IPS23_kskaulj20", "kskaulj20", "t&FRW]B1");
             Application.Run(new frmLogIn());
+            
         }
     }
 }

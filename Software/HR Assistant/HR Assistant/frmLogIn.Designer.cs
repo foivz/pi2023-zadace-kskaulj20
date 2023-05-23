@@ -1,6 +1,6 @@
 ﻿namespace HR_Assistant
 {
-    partial class LogIn
+    partial class frmLogIn
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txrLozinka = new System.Windows.Forms.TextBox();
+            this.txtLozinka = new System.Windows.Forms.TextBox();
             this.btnPrijava = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,13 +41,15 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(159, 22);
             this.txtEmail.TabIndex = 0;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
-            // txrLozinka
+            // txtLozinka
             // 
-            this.txrLozinka.Location = new System.Drawing.Point(314, 239);
-            this.txrLozinka.Name = "txrLozinka";
-            this.txrLozinka.Size = new System.Drawing.Size(159, 22);
-            this.txrLozinka.TabIndex = 1;
+            this.txtLozinka.Location = new System.Drawing.Point(314, 239);
+            this.txtLozinka.Name = "txtLozinka";
+            this.txtLozinka.Size = new System.Drawing.Size(159, 22);
+            this.txtLozinka.TabIndex = 1;
+            this.txtLozinka.TextChanged += new System.EventHandler(this.txrLozinka_TextChanged);
             // 
             // btnPrijava
             // 
@@ -57,6 +59,7 @@
             this.btnPrijava.TabIndex = 2;
             this.btnPrijava.Text = "Prijava";
             this.btnPrijava.UseVisualStyleBackColor = true;
+            this.btnPrijava.Click += new System.EventHandler(this.btnPrijava_Click);
             // 
             // label1
             // 
@@ -76,7 +79,7 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Lozinka";
             // 
-            // LogIn
+            // frmLogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -84,10 +87,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnPrijava);
-            this.Controls.Add(this.txrLozinka);
+            this.Controls.Add(this.txtLozinka);
             this.Controls.Add(this.txtEmail);
-            this.Name = "LogIn";
+            this.Name = "frmLogIn";
             this.Text = "LogIn";
+            this.Load += new System.EventHandler(this.frmLogIn_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -96,7 +100,7 @@
         #endregion
 
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txrLozinka;
+        private System.Windows.Forms.TextBox txtLozinka;
         private System.Windows.Forms.Button btnPrijava;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

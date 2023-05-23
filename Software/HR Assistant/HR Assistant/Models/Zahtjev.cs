@@ -9,14 +9,21 @@ namespace HR_Assistant.Models
     public class Zahtjev
     {
 
-        int ID_zahtjev { get; set; }
-        DateTime Pocetak_Odsustva { get; set; }     
+       public int ID_zahtjev { get; set; }
+      public  DateTime Pocetak_Odsustva { get; set; }     
 
-        DateTime KrajOdsustva { get; set; }
+       public  DateTime KrajOdsustva { get; set; }
 
-         string RazlogOdsustva { get; set;   }
+        public int RazlogOdsustva { get; set;   }
 
-         Zaposlenik Kreirao { get; set; }
+       public  string Kreirao { get; set; }
+        public int Status { get; set; } 
+        public string Komentar { get; set; }
+
+        public override string ToString()
+        {
+            return ID_zahtjev.ToString();
+        }
 
     }
 }

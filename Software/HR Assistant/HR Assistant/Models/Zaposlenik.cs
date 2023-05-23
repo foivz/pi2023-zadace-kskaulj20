@@ -8,15 +8,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace HR_Assistant
 {
     public class Zaposlenik : Korisnik
     {
-        public bool CheckPassword(string Lozinka)
+        
+       
+        public override string ToString()
         {
-            return Lozinka == Lozinka;
+            return Kor_ime;
         }
-
     }
 }
+
