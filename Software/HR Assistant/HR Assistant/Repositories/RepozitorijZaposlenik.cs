@@ -12,9 +12,9 @@ namespace HR_Assistant.Repositories
     public class RepozitorijZaposlenik
     {
 
-        public static Zaposlenik DohvatiZaposlenika(string Email)
+        public static Zaposlenik DohvatiZaposlenika(string Email, string Lozinka)
         {
-            string sql = $"SELECT * FROM Korisnici WHERE  email = '{Email}' ";
+            string sql = $"SELECT * FROM Korisnici WHERE  email = '{Email}' AND lozinka = '{Lozinka}' ";
             return FetchZaposlenik(sql);
         }
 
@@ -22,8 +22,8 @@ namespace HR_Assistant.Repositories
         {
             string sql = $"SELECT * FROM Korisnici WHERE  lozinka = '{Lozinka}' ";
             return FetchZaposlenik(sql);
-        }**/
-
+        }
+       **/
         private static Zaposlenik FetchZaposlenik(string sql)
         {
             DB.OpenConnection();
@@ -41,13 +41,13 @@ namespace HR_Assistant.Repositories
             return zaposlenik;
         }
 
-        private static Zaposlenik CreateObject(SqlDataReader reader)
+        public static Zaposlenik CreateObject(SqlDataReader reader)
         {
             int id = int.Parse(reader["Id"].ToString());
            
             string email = reader["email"].ToString();
             string lozinka = reader["lozinka"].ToString();
-            string uloga = reader["uloga"].ToString();
+            int uloga = int.Parse(reader["uloga"].ToString());
 
             var zaposlenik = new Zaposlenik
 
@@ -55,7 +55,7 @@ namespace HR_Assistant.Repositories
                 Id = id, 
                 Email = email,
                 Lozinka = lozinka,
-                //Uloga = uloga;
+                Uloga = uloga
                 
             };
             return zaposlenik;

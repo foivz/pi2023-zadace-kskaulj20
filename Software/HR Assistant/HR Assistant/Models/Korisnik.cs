@@ -14,7 +14,7 @@ namespace HR_Assistant.Models
         public string Email { get; set; }
         public string Lozinka { get; set; }
 
-        public string Uloga { get; set; }   
+        public int Uloga { get; set; }   
 
         public bool CheckPassword(string pwd)
         {

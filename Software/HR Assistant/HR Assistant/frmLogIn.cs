@@ -41,15 +41,30 @@ namespace HR_Assistant
             }
             else
             {
-                if(txtEmail.Text=="ahorvat" && txtLozinka.Text=="1234")
-                
-                   
+                UlogiranZaposlenik = RepozitorijZaposlenik.DohvatiZaposlenika(txtEmail.Text, txtLozinka.Text);
+                if (UlogiranZaposlenik != null && UlogiranZaposlenik.CheckPassword(txtLozinka.Text))
+
+
                 {
-                    frmPrikazZahtjeva frmPrikaz = new frmPrikazZahtjeva();
-                    Hide();
-                    frmPrikaz.ShowDialog();
-                    Close();
+                    if (UlogiranZaposlenik.Uloga == 1) {
+                        frmPrikazZahtjeva frmPrikaz = new frmPrikazZahtjeva();
+                        Hide();
+                        frmPrikaz.ShowDialog();
+                        Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Čekaj da se implementira...mkay","", MessageBoxButtons.OK);
+                        Close();
+                    }
+
                 }
+                else
+                {
+                    MessageBox.Show("Uneseni su pogrešni podaci!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+                
             }
 
         }

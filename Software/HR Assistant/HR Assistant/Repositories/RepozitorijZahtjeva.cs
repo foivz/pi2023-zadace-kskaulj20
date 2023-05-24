@@ -35,7 +35,7 @@ namespace HR_Assistant.Repositories
             int id = int.Parse(reader["ID_zahtjev"].ToString());
             DateTime date1 = DateTime.Parse(reader["pocetak_odsustva"].ToString());
             DateTime date2 = DateTime.Parse(reader["zavrsetak_odsustva"].ToString());
-            int razlog = int.Parse(reader["Id_vrsza"].ToString());
+            int razlog = int.Parse(reader["Id_vrsta"].ToString());
             string kreirao = (reader["Id_korisnik"].ToString());
             int status = int.Parse(reader["Id_status"].ToString());
             string komentar = (reader["komentar"].ToString());

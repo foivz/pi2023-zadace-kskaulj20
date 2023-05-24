@@ -34,5 +34,17 @@ namespace HR_Assistant
             List<Zahtjev> zahtjevi = RepozitorijZahtjeva.GetZahtjevi();
             dgvZahtjevi.DataSource = zahtjevi;
         }
+
+        private void PrikazKorisnik()
+        {
+            //List<Zaposlenik> zaposlenici = RepozitorijZaposlenik.DohvatiZaposlenika();
+            
+            //dgvKor_Ime.DataSource = zaposlenik;
+        }
+
+        private void dgvKor_Ime_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
