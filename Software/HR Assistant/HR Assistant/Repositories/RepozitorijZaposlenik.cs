@@ -18,12 +18,12 @@ namespace HR_Assistant.Repositories
             return FetchZaposlenik(sql);
         }
 
-       /** public static Zaposlenik DohvatiZaposlenika(string Lozinka)
+      /**  public static Zaposlenik UserPrikaz(string Email, string Lozinka)
         {
-            string sql = $"SELECT * FROM Korisnici WHERE  lozinka = '{Lozinka}' ";
+            string sql = $"SELECT kor_ime FROM Korisnici WHERE email = '{Email}' AND lozinka = '{Lozinka}' ";
             return FetchZaposlenik(sql);
-        }
-       **/
+        }**/
+       
         private static Zaposlenik FetchZaposlenik(string sql)
         {
             DB.OpenConnection();
@@ -40,7 +40,7 @@ namespace HR_Assistant.Repositories
 
             return zaposlenik;
         }
-
+        
         public static Zaposlenik CreateObject(SqlDataReader reader)
         {
             int id = int.Parse(reader["Id"].ToString());

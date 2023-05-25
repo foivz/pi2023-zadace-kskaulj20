@@ -16,7 +16,7 @@ namespace HR_Assistant.Repositories
             {
                 var zahtjevi = new List<Zahtjev>();
 
-                string sql = $"SELECT * FROM Zahtjev";
+                string sql = $"SELECT * FROM Zahtjev WHERE Id_status=1";
             //DB.SetConfiguration("31.147.204.119\\PISERVER,1433", "kskaulj20", "t&FRW]B1");
             DB.OpenConnection();
                 var reader = DB.GetDataReader(sql);
@@ -30,7 +30,27 @@ namespace HR_Assistant.Repositories
                 return zahtjevi;
             }
 
-        private static Zahtjev CreateObject(SqlDataReader reader)
+        
+            public static List<Zahtjev> GetObradeniZahtjevi()
+            {
+                var obradeni_zahtjevi = new List<Zahtjev>();
+
+                string sql = $"SELECT * FROM Zahtjev WHERE Id_status !=1 ";
+                //DB.SetConfiguration("31.147.204.119\\PISERVER,1433", "kskaulj20", "t&FRW]B1");
+                DB.OpenConnection();
+                var reader = DB.GetDataReader(sql);
+                while (reader.Read())
+                {
+                    Zahtjev obradeni_zahtjev = CreateObject(reader);
+                    obradeni_zahtjevi.Add(obradeni_zahtjev);
+                }
+                reader.Close();
+                DB.CloseConnection();
+                return obradeni_zahtjevi;
+            }
+        
+
+        public static Zahtjev CreateObject(SqlDataReader reader)
         {
             int id = int.Parse(reader["ID_zahtjev"].ToString());
             DateTime date1 = DateTime.Parse(reader["pocetak_odsustva"].ToString());

@@ -32,6 +32,7 @@ namespace HR_Assistant
         private void PrikazZahtjeva()
         {
             List<Zahtjev> zahtjevi = RepozitorijZahtjeva.GetZahtjevi();
+            
             dgvZahtjevi.DataSource = zahtjevi;
         }
 
@@ -42,9 +43,21 @@ namespace HR_Assistant
             //dgvKor_Ime.DataSource = zaposlenik;
         }
 
-        private void dgvKor_Ime_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnObradeni_Click(object sender, EventArgs e)
         {
-
+            FrmObradeniZahtjevi frmPrikazObradenih = new FrmObradeniZahtjevi();
+            Hide();
+            frmPrikazObradenih.ShowDialog();
+            Close();
         }
+
+        /**  private void dgvKor_Ime_CellContentClick(object sender, DataGridViewCellEventArgs e)
+          {
+              List<Zaposlenik> zaposlenici = RepozitorijZaposlenik.DohvatiZaposlenika(string email, string lozinka);
+
+              dgvKor_Ime.DataSource = zaposlenici;
+              DataGridViewBand band = dgvKor_Ime.Rows[3];
+              band.Visible = false;
+          }**/
     }
 }
