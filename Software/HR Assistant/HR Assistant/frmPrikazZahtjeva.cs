@@ -13,14 +13,26 @@ using System.Windows.Forms;
 namespace HR_Assistant
 {
     public partial class frmPrikazZahtjeva : Form
+
     {
+        private Zahtjev zahtjev;
+        public Zahtjev OdabranZahtjev { get => zahtjev; set => zahtjev = value; }
+
+
         public frmPrikazZahtjeva()
         {
             InitializeComponent();
+            //this.zahtjev = zahtjev;
+            //OdabranZahtjev = odabranZahtjev;
         }
 
         private void dgvZahtjevi_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+            FrmObradaZahtjeva frmObradaZahtjeva = new FrmObradaZahtjeva(OdabranZahtjev);
+            Hide();
+            frmObradaZahtjeva.ShowDialog();
+            Close();
 
         }
 
@@ -34,6 +46,15 @@ namespace HR_Assistant
             List<Zahtjev> zahtjevi = RepozitorijZahtjeva.GetZahtjevi();
             
             dgvZahtjevi.DataSource = zahtjevi;
+
+            dgvZahtjevi.Columns["ID_zahtjev"].HeaderCell.Value = "Šifra zahtjeva";
+            dgvZahtjevi.Columns["pocetak_odsustva"].HeaderCell.Value = "Početak odsustva";
+            dgvZahtjevi.Columns["KrajOdsustva"].HeaderCell.Value = "Završetak odsustva";
+            dgvZahtjevi.Columns["Komentar"].HeaderCell.Value = "Komentar";
+            dgvZahtjevi.Columns["Kreirao"].HeaderCell.Value = "Šifra zaposlenika";
+            dgvZahtjevi.Columns["RazlogOdsustva"].HeaderCell.Value = "Vrsta odsustva";
+            dgvZahtjevi.Columns["Status"].Visible = false;
+
         }
 
         private void PrikazKorisnik()

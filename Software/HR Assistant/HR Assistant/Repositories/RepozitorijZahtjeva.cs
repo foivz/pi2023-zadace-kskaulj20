@@ -17,7 +17,7 @@ namespace HR_Assistant.Repositories
                 var zahtjevi = new List<Zahtjev>();
 
                 string sql = $"SELECT * FROM Zahtjev WHERE Id_status=1";
-            //DB.SetConfiguration("31.147.204.119\\PISERVER,1433", "kskaulj20", "t&FRW]B1");
+            
             DB.OpenConnection();
                 var reader = DB.GetDataReader(sql);
                 while (reader.Read())
@@ -36,7 +36,7 @@ namespace HR_Assistant.Repositories
                 var obradeni_zahtjevi = new List<Zahtjev>();
 
                 string sql = $"SELECT * FROM Zahtjev WHERE Id_status !=1 ";
-                //DB.SetConfiguration("31.147.204.119\\PISERVER,1433", "kskaulj20", "t&FRW]B1");
+                
                 DB.OpenConnection();
                 var reader = DB.GetDataReader(sql);
                 while (reader.Read())
@@ -48,7 +48,44 @@ namespace HR_Assistant.Repositories
                 DB.CloseConnection();
                 return obradeni_zahtjevi;
             }
-        
+
+        public static List<Zahtjev> GetPoslaniZahtjevi()
+        {
+            var poslani_zahtjevi = new List<Zahtjev>();
+
+            string sql = $"SELECT * FROM Zahtjev WHERE Id_korisnik = 3";
+
+            DB.OpenConnection();
+            var reader = DB.GetDataReader(sql);
+            while (reader.Read())
+            {
+                Zahtjev poslani_zahtjev = CreateObject(reader);
+                poslani_zahtjevi.Add(poslani_zahtjev);
+            }
+            reader.Close();
+            DB.CloseConnection();
+            return poslani_zahtjevi;
+        }
+
+        public static void OdobrenjeZahtjeva(Zahtjev odabraniZahtjev)
+        {
+            string sql = $"UPDATE Zahtjev " + $"SET Id_status = 3 WHERE Id_zahtjev = {odabraniZahtjev.ID_zahtjev}";
+            DB.OpenConnection();
+            DB.ExecuteCommand(sql);
+            DB.CloseConnection();
+
+        }
+
+        public static void OdbijanjeZahtjeva(Zahtjev odabrani_zahtjev)
+        {
+            string sql = $"UPDATE Zahtjev SET Id_status = 2 WHERE Id_zahtjev = {odabrani_zahtjev.ID_zahtjev}";
+            DB.OpenConnection();
+            DB.ExecuteCommand(sql);
+            DB.CloseConnection();
+
+        }
+
+
 
         public static Zahtjev CreateObject(SqlDataReader reader)
         {

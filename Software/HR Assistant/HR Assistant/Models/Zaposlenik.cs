@@ -1,4 +1,5 @@
 ﻿using HR_Assistant.Models;
+using HR_Assistant.Repositories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +20,11 @@ namespace HR_Assistant
         public override string ToString()
         {
             return Kor_ime;
+        }
+
+        public void OdobriZahtjev(Zahtjev odabranZahtjev)
+        {
+            RepozitorijZahtjeva.OdobrenjeZahtjeva(odabranZahtjev);
         }
     }
 }

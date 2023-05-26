@@ -54,7 +54,10 @@ namespace HR_Assistant
                     }
                     else
                     {
-                        MessageBox.Show("Čekaj da se implementira...mkay","", MessageBoxButtons.OK);
+
+                        FrmPrikazZahtjevaZaposlenik frmPrikazZaposlenik = new FrmPrikazZahtjevaZaposlenik();
+                        Hide();
+                        frmPrikazZaposlenik.ShowDialog();
                         Close();
                     }
 

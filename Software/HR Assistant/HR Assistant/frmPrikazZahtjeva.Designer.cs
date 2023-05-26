@@ -42,13 +42,13 @@
             this.dgvZahtjevi.Name = "dgvZahtjevi";
             this.dgvZahtjevi.RowHeadersWidth = 51;
             this.dgvZahtjevi.RowTemplate.Height = 24;
-            this.dgvZahtjevi.Size = new System.Drawing.Size(711, 284);
+            this.dgvZahtjevi.Size = new System.Drawing.Size(902, 285);
             this.dgvZahtjevi.TabIndex = 0;
             this.dgvZahtjevi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvZahtjevi_CellContentClick);
             // 
             // BtnIzvjestaj
             // 
-            this.BtnIzvjestaj.Location = new System.Drawing.Point(656, 395);
+            this.BtnIzvjestaj.Location = new System.Drawing.Point(847, 394);
             this.BtnIzvjestaj.Name = "BtnIzvjestaj";
             this.BtnIzvjestaj.Size = new System.Drawing.Size(98, 34);
             this.BtnIzvjestaj.TabIndex = 1;
@@ -78,7 +78,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1061, 488);
             this.Controls.Add(this.btnObradeni);
             this.Controls.Add(this.lblDobrodosli);
             this.Controls.Add(this.BtnIzvjestaj);
