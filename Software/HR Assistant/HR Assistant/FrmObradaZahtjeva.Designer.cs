@@ -28,26 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.btnOdobri = new System.Windows.Forms.Button();
             this.btnOdbij = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(156, 96);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(393, 214);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
-            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
-            // 
             // btnOdobri
             // 
-            this.btnOdobri.Location = new System.Drawing.Point(156, 360);
+            this.btnOdobri.Location = new System.Drawing.Point(158, 143);
             this.btnOdobri.Name = "btnOdobri";
-            this.btnOdobri.Size = new System.Drawing.Size(75, 23);
+            this.btnOdobri.Size = new System.Drawing.Size(125, 42);
             this.btnOdobri.TabIndex = 1;
             this.btnOdobri.Text = "Odobri";
             this.btnOdobri.UseVisualStyleBackColor = true;
@@ -55,9 +45,9 @@
             // 
             // btnOdbij
             // 
-            this.btnOdbij.Location = new System.Drawing.Point(474, 360);
+            this.btnOdbij.Location = new System.Drawing.Point(379, 143);
             this.btnOdbij.Name = "btnOdbij";
-            this.btnOdbij.Size = new System.Drawing.Size(75, 23);
+            this.btnOdbij.Size = new System.Drawing.Size(123, 42);
             this.btnOdbij.TabIndex = 2;
             this.btnOdbij.Text = "Odbij";
             this.btnOdbij.UseVisualStyleBackColor = true;
@@ -66,21 +56,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(153, 52);
+            this.label1.Location = new System.Drawing.Point(213, 84);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 16);
+            this.label1.Size = new System.Drawing.Size(247, 16);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Obrazloženje:";
+            this.label1.Text = "Na koji način želite obraditi ovaj zahtjev?";
             // 
             // FrmObradaZahtjeva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(705, 419);
+            this.ClientSize = new System.Drawing.Size(691, 230);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnOdbij);
             this.Controls.Add(this.btnOdobri);
-            this.Controls.Add(this.richTextBox1);
             this.Name = "FrmObradaZahtjeva";
             this.Text = "Obrada zahtjeva";
             this.Load += new System.EventHandler(this.FrmObradaZahtjeva_Load);
@@ -90,8 +79,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button btnOdobri;
         private System.Windows.Forms.Button btnOdbij;
         private System.Windows.Forms.Label label1;

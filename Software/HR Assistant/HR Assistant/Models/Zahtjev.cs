@@ -25,5 +25,16 @@ namespace HR_Assistant.Models
             return ID_zahtjev.ToString();
         }
 
+        public bool Bolovanje(int razlogOdsustva)
+        {
+            if(razlogOdsustva != 1)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
     }
 }

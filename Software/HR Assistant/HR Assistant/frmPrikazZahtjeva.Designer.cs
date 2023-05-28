@@ -34,6 +34,7 @@
             this.btnObradeni = new System.Windows.Forms.Button();
             this.txtPretrazi = new System.Windows.Forms.TextBox();
             this.btnPretrazi = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvZahtjevi)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,6 +47,7 @@
             this.dgvZahtjevi.RowTemplate.Height = 24;
             this.dgvZahtjevi.Size = new System.Drawing.Size(902, 285);
             this.dgvZahtjevi.TabIndex = 0;
+            this.dgvZahtjevi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvZahtjevi_CellContentClick);
             // 
             // BtnObrada
             // 
@@ -78,7 +80,7 @@
             // 
             // txtPretrazi
             // 
-            this.txtPretrazi.Location = new System.Drawing.Point(164, 76);
+            this.txtPretrazi.Location = new System.Drawing.Point(181, 76);
             this.txtPretrazi.Name = "txtPretrazi";
             this.txtPretrazi.Size = new System.Drawing.Size(228, 22);
             this.txtPretrazi.TabIndex = 6;
@@ -88,17 +90,27 @@
             // 
             this.btnPretrazi.Location = new System.Drawing.Point(43, 76);
             this.btnPretrazi.Name = "btnPretrazi";
-            this.btnPretrazi.Size = new System.Drawing.Size(115, 23);
+            this.btnPretrazi.Size = new System.Drawing.Size(132, 23);
             this.btnPretrazi.TabIndex = 7;
             this.btnPretrazi.Text = "Pretraži po ID-u";
             this.btnPretrazi.UseVisualStyleBackColor = true;
             this.btnPretrazi.Click += new System.EventHandler(this.btnPretrazi_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(416, 82);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(139, 16);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "(svi zahtjevi u sustavu)";
             // 
             // frmPrikazZahtjeva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1061, 488);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnPretrazi);
             this.Controls.Add(this.txtPretrazi);
             this.Controls.Add(this.btnObradeni);
@@ -122,5 +134,6 @@
         private System.Windows.Forms.Button btnObradeni;
         private System.Windows.Forms.TextBox txtPretrazi;
         private System.Windows.Forms.Button btnPretrazi;
+        private System.Windows.Forms.Label label2;
     }
 }

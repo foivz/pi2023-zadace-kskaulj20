@@ -59,6 +59,8 @@ namespace HR_Assistant
         {
             List<Zahtjev> zahtjevi = RepozitorijZahtjeva.GetZahtjevi();
             
+            
+            
             dgvZahtjevi.DataSource = zahtjevi;
 
             dgvZahtjevi.Columns["ID_zahtjev"].HeaderCell.Value = "Šifra zahtjeva";
@@ -71,12 +73,7 @@ namespace HR_Assistant
 
         }
 
-        private void PrikazKorisnik()
-        {
-            //List<Zaposlenik> zaposlenici = RepozitorijZaposlenik.DohvatiZaposlenika();
-            
-            //dgvKor_Ime.DataSource = zaposlenik;
-        }
+        
 
         private void btnObradeni_Click(object sender, EventArgs e)
         {
@@ -88,14 +85,15 @@ namespace HR_Assistant
 
         private void btnPretrazi_Click(object sender, EventArgs e)
         {
-            if(txtPretrazi.Text !=" ")
+            if(txtPretrazi.Text !="")
             {
                 int Id_zahtjev = int.Parse(txtPretrazi.Text);
                 PrikazTrazenihZahtjeva(Id_zahtjev);
             }
             else
             {
-                MessageBox.Show("Traženi zahtjev ne posoji!");
+                PrikazZahtjeva();
+
             }
         }
 
@@ -120,6 +118,11 @@ namespace HR_Assistant
                 frmObradaZahtjeva.ShowDialog();
             }
             this.OsvjeziPrikaz();
+        }
+
+        private void dgvZahtjevi_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
         /**  private void dgvKor_Ime_CellContentClick(object sender, DataGridViewCellEventArgs e)
