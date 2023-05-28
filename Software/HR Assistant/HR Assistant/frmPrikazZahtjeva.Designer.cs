@@ -32,13 +32,15 @@
             this.BtnIzvjestaj = new System.Windows.Forms.Button();
             this.lblDobrodosli = new System.Windows.Forms.Label();
             this.btnObradeni = new System.Windows.Forms.Button();
+            this.txtPretrazi = new System.Windows.Forms.TextBox();
+            this.btnPretrazi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvZahtjevi)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvZahtjevi
             // 
             this.dgvZahtjevi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvZahtjevi.Location = new System.Drawing.Point(43, 88);
+            this.dgvZahtjevi.Location = new System.Drawing.Point(43, 113);
             this.dgvZahtjevi.Name = "dgvZahtjevi";
             this.dgvZahtjevi.RowHeadersWidth = 51;
             this.dgvZahtjevi.RowTemplate.Height = 24;
@@ -48,7 +50,7 @@
             // 
             // BtnIzvjestaj
             // 
-            this.BtnIzvjestaj.Location = new System.Drawing.Point(847, 394);
+            this.BtnIzvjestaj.Location = new System.Drawing.Point(847, 414);
             this.BtnIzvjestaj.Name = "BtnIzvjestaj";
             this.BtnIzvjestaj.Size = new System.Drawing.Size(98, 34);
             this.BtnIzvjestaj.TabIndex = 1;
@@ -66,7 +68,7 @@
             // 
             // btnObradeni
             // 
-            this.btnObradeni.Location = new System.Drawing.Point(48, 395);
+            this.btnObradeni.Location = new System.Drawing.Point(43, 415);
             this.btnObradeni.Name = "btnObradeni";
             this.btnObradeni.Size = new System.Drawing.Size(137, 33);
             this.btnObradeni.TabIndex = 5;
@@ -74,11 +76,30 @@
             this.btnObradeni.UseVisualStyleBackColor = true;
             this.btnObradeni.Click += new System.EventHandler(this.btnObradeni_Click);
             // 
+            // txtPretrazi
+            // 
+            this.txtPretrazi.Location = new System.Drawing.Point(164, 76);
+            this.txtPretrazi.Name = "txtPretrazi";
+            this.txtPretrazi.Size = new System.Drawing.Size(228, 22);
+            this.txtPretrazi.TabIndex = 6;
+            // 
+            // btnPretrazi
+            // 
+            this.btnPretrazi.Location = new System.Drawing.Point(43, 76);
+            this.btnPretrazi.Name = "btnPretrazi";
+            this.btnPretrazi.Size = new System.Drawing.Size(115, 23);
+            this.btnPretrazi.TabIndex = 7;
+            this.btnPretrazi.Text = "Pretraži po ID-u";
+            this.btnPretrazi.UseVisualStyleBackColor = true;
+            this.btnPretrazi.Click += new System.EventHandler(this.btnPretrazi_Click);
+            // 
             // frmPrikazZahtjeva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1061, 488);
+            this.Controls.Add(this.btnPretrazi);
+            this.Controls.Add(this.txtPretrazi);
             this.Controls.Add(this.btnObradeni);
             this.Controls.Add(this.lblDobrodosli);
             this.Controls.Add(this.BtnIzvjestaj);
@@ -98,5 +119,7 @@
         private System.Windows.Forms.Button BtnIzvjestaj;
         private System.Windows.Forms.Label lblDobrodosli;
         private System.Windows.Forms.Button btnObradeni;
+        private System.Windows.Forms.TextBox txtPretrazi;
+        private System.Windows.Forms.Button btnPretrazi;
     }
 }

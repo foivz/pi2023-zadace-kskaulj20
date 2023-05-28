@@ -54,6 +54,7 @@
             this.btnDodajZahtjev.TabIndex = 1;
             this.btnDodajZahtjev.Text = "Novi zahtjev";
             this.btnDodajZahtjev.UseVisualStyleBackColor = true;
+            this.btnDodajZahtjev.Click += new System.EventHandler(this.btnDodajZahtjev_Click);
             // 
             // btnObrisi
             // 
@@ -63,6 +64,7 @@
             this.btnObrisi.TabIndex = 2;
             this.btnObrisi.Text = "Obriši zahtjev";
             this.btnObrisi.UseVisualStyleBackColor = true;
+            this.btnObrisi.Click += new System.EventHandler(this.btnObrisi_Click);
             // 
             // lblDobrodosli
             // 

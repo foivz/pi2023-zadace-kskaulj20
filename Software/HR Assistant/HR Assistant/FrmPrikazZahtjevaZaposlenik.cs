@@ -36,5 +36,27 @@ namespace HR_Assistant
         {
            
         }
+        private void OsvjeziPrikaz()
+        {
+            List<Zahtjev> zahtjevi = RepozitorijZahtjeva.GetPoslaniZahtjevi();
+            dgvZahtjeviZaposlenik.DataSource = zahtjevi;
+        }
+
+        private void btnObrisi_Click(object sender, EventArgs e)
+        {
+            Zahtjev odabraniZahtjev = dgvZahtjeviZaposlenik.CurrentRow.DataBoundItem as Zahtjev;
+            RepozitorijZahtjeva repozitorij = new RepozitorijZahtjeva();
+            repozitorij.ObrisiZahtjev(odabraniZahtjev.ID_zahtjev);
+            MessageBox.Show("Uspješno obrisan zahtjev" );
+            this.OsvjeziPrikaz();
+        }
+
+        private void btnDodajZahtjev_Click(object sender, EventArgs e)
+        {
+            FrmNoviZahtjev frmNoviZahtjev = new FrmNoviZahtjev();
+            Hide();
+            frmNoviZahtjev.ShowDialog();
+            Close();
+        }
     }
 }

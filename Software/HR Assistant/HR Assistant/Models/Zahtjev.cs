@@ -10,9 +10,9 @@ namespace HR_Assistant.Models
     {
 
        public int ID_zahtjev { get; set; }
-      public  DateTime Pocetak_Odsustva { get; set; }     
+      public  string Pocetak_Odsustva { get; set; }     
 
-       public  DateTime KrajOdsustva { get; set; }
+       public  string KrajOdsustva { get; set; }
 
         public int RazlogOdsustva { get; set;   }
 

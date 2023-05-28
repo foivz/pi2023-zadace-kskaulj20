@@ -51,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmNoviZahtjev.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNoviZahtjev.Designer.cs">
+      <DependentUpon>FrmNoviZahtjev.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPrikazZahtjevaZaposlenik.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,9 @@
     <Compile Include="Models\Zaposlenik.cs" />
     <Compile Include="Repositories\RepozitorijZahtjeva.cs" />
     <Compile Include="Repositories\RepozitorijZaposlenik.cs" />
+    <EmbeddedResource Include="FrmNoviZahtjev.resx">
+      <DependentUpon>FrmNoviZahtjev.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmPrikazZahtjevaZaposlenik.resx">
       <DependentUpon>FrmPrikazZahtjevaZaposlenik.cs</DependentUpon>
     </EmbeddedResource>

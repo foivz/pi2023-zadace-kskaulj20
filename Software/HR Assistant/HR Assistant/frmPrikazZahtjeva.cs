@@ -41,6 +41,20 @@ namespace HR_Assistant
             PrikazZahtjeva();
         }
 
+        private void PrikazTrazenihZahtjeva(int Id_zahtjev)
+        {
+            var TrazeniZahtjevi = RepozitorijZahtjeva.DohvatiTrazeniZahtjev(Id_zahtjev);
+            dgvZahtjevi.DataSource = TrazeniZahtjevi;
+            dgvZahtjevi.Columns["ID_zahtjev"].HeaderCell.Value = "Šifra zahtjeva";
+            dgvZahtjevi.Columns["pocetak_odsustva"].HeaderCell.Value = "Početak odsustva";
+            dgvZahtjevi.Columns["KrajOdsustva"].HeaderCell.Value = "Završetak odsustva";
+            dgvZahtjevi.Columns["Komentar"].HeaderCell.Value = "Komentar";
+            dgvZahtjevi.Columns["Kreirao"].HeaderCell.Value = "Šifra zaposlenika";
+            dgvZahtjevi.Columns["RazlogOdsustva"].HeaderCell.Value = "Vrsta odsustva";
+            dgvZahtjevi.Columns["Status"].Visible = false;
+
+        }
+
         private void PrikazZahtjeva()
         {
             List<Zahtjev> zahtjevi = RepozitorijZahtjeva.GetZahtjevi();
@@ -70,6 +84,15 @@ namespace HR_Assistant
             Hide();
             frmPrikazObradenih.ShowDialog();
             Close();
+        }
+
+        private void btnPretrazi_Click(object sender, EventArgs e)
+        {
+            if(txtPretrazi.Text !=" ")
+            {
+                int Id_zahtjev = int.Parse(txtPretrazi.Text);
+                PrikazTrazenihZahtjeva(Id_zahtjev);
+            }
         }
 
         /**  private void dgvKor_Ime_CellContentClick(object sender, DataGridViewCellEventArgs e)

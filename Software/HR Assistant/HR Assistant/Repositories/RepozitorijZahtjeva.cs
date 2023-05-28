@@ -67,6 +67,23 @@ namespace HR_Assistant.Repositories
             return poslani_zahtjevi;
         }
 
+        public static List<Zahtjev> VrsteOdsustva()
+        {
+            var vrste = new List<Zahtjev>();
+            string sql = $"SELECT * FROM VrstaOdsustva";
+            DB.OpenConnection();
+            var reader = DB.GetDataReader(sql);
+            while (reader.Read())
+            {
+                Zahtjev vrsta = CreateObject(reader);
+                vrste.Add(vrsta);
+            }
+            reader.Close();
+            DB.CloseConnection();
+            return vrste;
+
+        }
+
         public static void OdobrenjeZahtjeva(Zahtjev odabraniZahtjev)
         {
             string sql = $"UPDATE Zahtjev " + $"SET Id_status = 3 WHERE Id_zahtjev = {odabraniZahtjev.ID_zahtjev}";
@@ -89,9 +106,9 @@ namespace HR_Assistant.Repositories
 
         public static Zahtjev CreateObject(SqlDataReader reader)
         {
-            int id = int.Parse(reader["ID_zahtjev"].ToString());
-            DateTime date1 = DateTime.Parse(reader["pocetak_odsustva"].ToString());
-            DateTime date2 = DateTime.Parse(reader["zavrsetak_odsustva"].ToString());
+            int id = int.Parse(reader["Id_zahtjev"].ToString());
+            string date1 = (reader["pocetak_odsustva"].ToString());
+            string date2 = (reader["zavrsetak_odsustva"].ToString());
             int razlog = int.Parse(reader["Id_vrsta"].ToString());
             string kreirao = (reader["Id_korisnik"].ToString());
             int status = int.Parse(reader["Id_status"].ToString());
@@ -111,6 +128,41 @@ namespace HR_Assistant.Repositories
             
 
           
+        }
+
+        public static List<Zahtjev> DohvatiTrazeniZahtjev (int Id_zahtjev){
+            string sql = $"SELECT * FROM Zahtjev WHERE Id_zahtjev={Id_zahtjev}";
+            List<Zahtjev> trazeniZahtjevi = new List<Zahtjev> ();
+            DB.OpenConnection();
+            var reader = DB.GetDataReader (sql);
+            while (reader.Read())
+            {
+                Zahtjev zahtjev = CreateObject (reader);
+                trazeniZahtjevi.Add (zahtjev);
+            }
+
+            reader.Close ();
+            DB.CloseConnection();
+            return trazeniZahtjevi; 
+        }
+
+        
+        public void DodajZahtjev(Zahtjev zahtjev)
+        {
+            string sql = $"INSERT INTO Zahtjev (Id_zahtjev, pocetak_odsustva, zavrsetak_odsustva, komentar, Id_korisnik, Id_vrsta, Id_status) VALUES ({ zahtjev.ID_zahtjev}, { zahtjev.Pocetak_Odsustva}, { zahtjev.KrajOdsustva}, { zahtjev.Komentar}, { zahtjev.Kreirao}, { zahtjev.RazlogOdsustva}, { zahtjev.Status})";
+            //cmd.Parameters.AddWithValue("@value", dateTimeVariable);
+            DB.OpenConnection();
+            DB.ExecuteCommand(sql);
+            DB.CloseConnection();
+        }
+
+        public void ObrisiZahtjev(int id_zahtjev)
+        {
+            string sql = $"DELETE FROM Zahtjev WHERE Id_zahtjev = {id_zahtjev}";
+            DB.OpenConnection();
+            DB.ExecuteCommand(sql);
+            DB.CloseConnection();
+            
         }
     }
 }
