@@ -26,7 +26,7 @@ namespace HR_Assistant
             //OdabranZahtjev = odabranZahtjev;
         }
 
-        private void dgvZahtjevi_CellContentClick(object sender, DataGridViewCellEventArgs e)
+       /** private void dgvZahtjevi_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
             FrmObradaZahtjeva frmObradaZahtjeva = new FrmObradaZahtjeva(OdabranZahtjev);
@@ -34,7 +34,7 @@ namespace HR_Assistant
             frmObradaZahtjeva.ShowDialog();
             Close();
 
-        }
+        }**/
 
         private void frmPrikazZahtjeva_Load(object sender, EventArgs e)
         {
@@ -93,11 +93,33 @@ namespace HR_Assistant
                 int Id_zahtjev = int.Parse(txtPretrazi.Text);
                 PrikazTrazenihZahtjeva(Id_zahtjev);
             }
+            else
+            {
+                MessageBox.Show("Traženi zahtjev ne posoji!");
+            }
         }
 
         private void txtPretrazi_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        public void OsvjeziPrikaz()
+        {
+            List<Zahtjev> zahtjevi = RepozitorijZahtjeva.GetZahtjevi();
+            dgvZahtjevi.DataSource = zahtjevi;
+        }
+
+        private void BtnObrada_Click(object sender, EventArgs e)
+        {
+
+            Zahtjev odabraniZahtjev = dgvZahtjevi.CurrentRow.DataBoundItem as Zahtjev;
+            if( odabraniZahtjev != null)
+            {
+                FrmObradaZahtjeva frmObradaZahtjeva = new FrmObradaZahtjeva(odabraniZahtjev);
+                frmObradaZahtjeva.ShowDialog();
+            }
+            this.OsvjeziPrikaz();
         }
 
         /**  private void dgvKor_Ime_CellContentClick(object sender, DataGridViewCellEventArgs e)

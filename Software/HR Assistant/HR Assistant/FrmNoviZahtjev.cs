@@ -63,8 +63,14 @@ namespace HR_Assistant
 
             repozitorij.DodajZahtjev(NoviZahtjev, frmLogIn.UlogiranZaposlenik );
 
+            Hide();
+            Close();
+            FrmPrikazZahtjevaZaposlenik frmPrikazZahtjevaZaposlenik = new FrmPrikazZahtjevaZaposlenik();
+            frmPrikazZahtjevaZaposlenik.ShowDialog();
 
         }
+
+       
 
         private void txtKomentar_TextChanged(object sender, EventArgs e)
         {

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.dgvZahtjevi = new System.Windows.Forms.DataGridView();
-            this.BtnIzvjestaj = new System.Windows.Forms.Button();
+            this.BtnObrada = new System.Windows.Forms.Button();
             this.lblDobrodosli = new System.Windows.Forms.Label();
             this.btnObradeni = new System.Windows.Forms.Button();
             this.txtPretrazi = new System.Windows.Forms.TextBox();
@@ -46,16 +46,16 @@
             this.dgvZahtjevi.RowTemplate.Height = 24;
             this.dgvZahtjevi.Size = new System.Drawing.Size(902, 285);
             this.dgvZahtjevi.TabIndex = 0;
-            this.dgvZahtjevi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvZahtjevi_CellContentClick);
             // 
-            // BtnIzvjestaj
+            // BtnObrada
             // 
-            this.BtnIzvjestaj.Location = new System.Drawing.Point(847, 414);
-            this.BtnIzvjestaj.Name = "BtnIzvjestaj";
-            this.BtnIzvjestaj.Size = new System.Drawing.Size(98, 34);
-            this.BtnIzvjestaj.TabIndex = 1;
-            this.BtnIzvjestaj.Text = "Izvještaj";
-            this.BtnIzvjestaj.UseVisualStyleBackColor = true;
+            this.BtnObrada.Location = new System.Drawing.Point(847, 414);
+            this.BtnObrada.Name = "BtnObrada";
+            this.BtnObrada.Size = new System.Drawing.Size(98, 34);
+            this.BtnObrada.TabIndex = 1;
+            this.BtnObrada.Text = "Obradi zahtjev";
+            this.BtnObrada.UseVisualStyleBackColor = true;
+            this.BtnObrada.Click += new System.EventHandler(this.BtnObrada_Click);
             // 
             // lblDobrodosli
             // 
@@ -103,7 +103,7 @@
             this.Controls.Add(this.txtPretrazi);
             this.Controls.Add(this.btnObradeni);
             this.Controls.Add(this.lblDobrodosli);
-            this.Controls.Add(this.BtnIzvjestaj);
+            this.Controls.Add(this.BtnObrada);
             this.Controls.Add(this.dgvZahtjevi);
             this.Name = "frmPrikazZahtjeva";
             this.Text = "Zaprimljeni zahtjevi";
@@ -117,7 +117,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvZahtjevi;
-        private System.Windows.Forms.Button BtnIzvjestaj;
+        private System.Windows.Forms.Button BtnObrada;
         private System.Windows.Forms.Label lblDobrodosli;
         private System.Windows.Forms.Button btnObradeni;
         private System.Windows.Forms.TextBox txtPretrazi;

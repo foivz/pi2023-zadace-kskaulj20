@@ -61,6 +61,7 @@
             this.btnOdbij.TabIndex = 2;
             this.btnOdbij.Text = "Odbij";
             this.btnOdbij.UseVisualStyleBackColor = true;
+            this.btnOdbij.Click += new System.EventHandler(this.btnOdbij_Click);
             // 
             // label1
             // 

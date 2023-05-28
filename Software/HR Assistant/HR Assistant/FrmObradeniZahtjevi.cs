@@ -35,5 +35,11 @@ namespace HR_Assistant
         {
             PrikazZahtjeva();
         }
+
+        private void btnUredu_Click(object sender, EventArgs e)
+        {
+            frmPrikazZahtjeva frmPrikaz = new frmPrikazZahtjeva();
+            frmPrikaz.ShowDialog(); 
+        }
     }
 }

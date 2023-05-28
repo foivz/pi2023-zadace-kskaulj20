@@ -45,7 +45,17 @@ namespace HR_Assistant
 
         private void btnOdobri_Click(object sender, EventArgs e)
         {
-           
+            RepozitorijZahtjeva.OdobrenjeZahtjeva(_odabranZahtjev);
+            Close();
+            Hide();
+            
+        }
+
+        private void btnOdbij_Click(object sender, EventArgs e)
+        {
+            RepozitorijZahtjeva.OdbijanjeZahtjeva(_odabranZahtjev);
+            Close();
+            Hide();
         }
     }
 }

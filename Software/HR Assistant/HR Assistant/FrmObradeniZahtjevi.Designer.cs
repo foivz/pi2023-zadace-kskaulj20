@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.dgvObradeni = new System.Windows.Forms.DataGridView();
+            this.btnUredu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvObradeni)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,11 +44,22 @@
             this.dgvObradeni.TabIndex = 0;
             this.dgvObradeni.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvObradeni_CellContentClick);
             // 
+            // btnUredu
+            // 
+            this.btnUredu.Location = new System.Drawing.Point(315, 409);
+            this.btnUredu.Name = "btnUredu";
+            this.btnUredu.Size = new System.Drawing.Size(110, 29);
+            this.btnUredu.TabIndex = 1;
+            this.btnUredu.Text = "U redu";
+            this.btnUredu.UseVisualStyleBackColor = true;
+            this.btnUredu.Click += new System.EventHandler(this.btnUredu_Click);
+            // 
             // FrmObradeniZahtjevi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnUredu);
             this.Controls.Add(this.dgvObradeni);
             this.Name = "FrmObradeniZahtjevi";
             this.Text = "Obrađeni zahtjevi";
@@ -60,5 +72,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvObradeni;
+        private System.Windows.Forms.Button btnUredu;
     }
 }
