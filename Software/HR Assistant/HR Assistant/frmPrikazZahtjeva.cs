@@ -125,6 +125,14 @@ namespace HR_Assistant
 
         }
 
+        private void btnOdjava_Click(object sender, EventArgs e)
+        {
+            frmLogIn frmLog = new frmLogIn();
+            Hide();
+            frmLog.ShowDialog();
+            Close();
+        }
+
         /**  private void dgvKor_Ime_CellContentClick(object sender, DataGridViewCellEventArgs e)
           {
               List<Zaposlenik> zaposlenici = RepozitorijZaposlenik.DohvatiZaposlenika(string email, string lozinka);

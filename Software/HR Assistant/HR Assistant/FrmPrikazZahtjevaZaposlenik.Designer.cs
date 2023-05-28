@@ -32,6 +32,7 @@
             this.btnDodajZahtjev = new System.Windows.Forms.Button();
             this.btnObrisi = new System.Windows.Forms.Button();
             this.lblDobrodosli = new System.Windows.Forms.Label();
+            this.btnOdjava = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvZahtjeviZaposlenik)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,11 +76,22 @@
             this.lblDobrodosli.TabIndex = 3;
             this.lblDobrodosli.Text = "Dobrodošli!";
             // 
+            // btnOdjava
+            // 
+            this.btnOdjava.Location = new System.Drawing.Point(709, 36);
+            this.btnOdjava.Name = "btnOdjava";
+            this.btnOdjava.Size = new System.Drawing.Size(81, 29);
+            this.btnOdjava.TabIndex = 4;
+            this.btnOdjava.Text = "Odjava";
+            this.btnOdjava.UseVisualStyleBackColor = true;
+            this.btnOdjava.Click += new System.EventHandler(this.btnOdjava_Click);
+            // 
             // FrmPrikazZahtjevaZaposlenik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(885, 495);
+            this.Controls.Add(this.btnOdjava);
             this.Controls.Add(this.lblDobrodosli);
             this.Controls.Add(this.btnObrisi);
             this.Controls.Add(this.btnDodajZahtjev);
@@ -99,5 +111,6 @@
         private System.Windows.Forms.Button btnDodajZahtjev;
         private System.Windows.Forms.Button btnObrisi;
         private System.Windows.Forms.Label lblDobrodosli;
+        private System.Windows.Forms.Button btnOdjava;
     }
 }

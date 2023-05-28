@@ -58,5 +58,13 @@ namespace HR_Assistant
             frmNoviZahtjev.ShowDialog();
             Close();
         }
+
+        private void btnOdjava_Click(object sender, EventArgs e)
+        {
+            frmLogIn frmLog = new frmLogIn();
+            Hide();
+            frmLog.ShowDialog();    
+            Close();
+        }
     }
 }

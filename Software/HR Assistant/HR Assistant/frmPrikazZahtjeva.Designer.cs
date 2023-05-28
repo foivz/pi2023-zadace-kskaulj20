@@ -35,6 +35,7 @@
             this.txtPretrazi = new System.Windows.Forms.TextBox();
             this.btnPretrazi = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnOdjava = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvZahtjevi)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,9 +52,9 @@
             // 
             // BtnObrada
             // 
-            this.BtnObrada.Location = new System.Drawing.Point(847, 414);
+            this.BtnObrada.Location = new System.Drawing.Point(847, 415);
             this.BtnObrada.Name = "BtnObrada";
-            this.BtnObrada.Size = new System.Drawing.Size(98, 34);
+            this.BtnObrada.Size = new System.Drawing.Size(98, 33);
             this.BtnObrada.TabIndex = 1;
             this.BtnObrada.Text = "Obradi zahtjev";
             this.BtnObrada.UseVisualStyleBackColor = true;
@@ -105,11 +106,22 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "(svi zahtjevi u sustavu)";
             // 
+            // btnOdjava
+            // 
+            this.btnOdjava.Location = new System.Drawing.Point(870, 66);
+            this.btnOdjava.Name = "btnOdjava";
+            this.btnOdjava.Size = new System.Drawing.Size(75, 23);
+            this.btnOdjava.TabIndex = 10;
+            this.btnOdjava.Text = "Odjava";
+            this.btnOdjava.UseVisualStyleBackColor = true;
+            this.btnOdjava.Click += new System.EventHandler(this.btnOdjava_Click);
+            // 
             // frmPrikazZahtjeva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1061, 488);
+            this.Controls.Add(this.btnOdjava);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnPretrazi);
             this.Controls.Add(this.txtPretrazi);
@@ -135,5 +147,6 @@
         private System.Windows.Forms.TextBox txtPretrazi;
         private System.Windows.Forms.Button btnPretrazi;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnOdjava;
     }
 }

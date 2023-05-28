@@ -52,7 +52,7 @@ namespace HR_Assistant
                         frmPrikaz.ShowDialog();
                         Close();
                     }
-                    else
+                    else if (UlogiranZaposlenik.Uloga == 2)
                     {
 
                         FrmPrikazZahtjevaZaposlenik frmPrikazZaposlenik = new FrmPrikazZahtjevaZaposlenik();
