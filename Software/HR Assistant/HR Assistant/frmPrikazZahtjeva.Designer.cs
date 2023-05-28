@@ -82,6 +82,7 @@
             this.txtPretrazi.Name = "txtPretrazi";
             this.txtPretrazi.Size = new System.Drawing.Size(228, 22);
             this.txtPretrazi.TabIndex = 6;
+            this.txtPretrazi.TextChanged += new System.EventHandler(this.txtPretrazi_TextChanged);
             // 
             // btnPretrazi
             // 

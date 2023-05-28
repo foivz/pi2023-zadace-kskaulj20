@@ -30,7 +30,7 @@ namespace HR_Assistant
             
             SviZahtjevi = RepozitorijZahtjeva.GetZahtjevi();
             NoviZahtjev = new Zahtjev();
-            NoviZahtjev.ID_zahtjev = SviZahtjevi.Last().ID_zahtjev + 1;
+            //NoviZahtjev.ID_zahtjev = SviZahtjevi.Last().ID_zahtjev + 1;
             NoviZahtjev.Kreirao = frmLogIn.UlogiranZaposlenik.Id.ToString();
             
             
@@ -52,7 +52,7 @@ namespace HR_Assistant
             Zahtjev NoviZahtjev = new Zahtjev();
             {
                 NoviZahtjev.Pocetak_Odsustva = txtPocetak.Text;
-                
+                NoviZahtjev.ID_zahtjev = int.Parse(txtId.Text);
                 NoviZahtjev.KrajOdsustva = txtKraj.Text;
                 NoviZahtjev.RazlogOdsustva = cboRazlog.SelectedIndex;
                 NoviZahtjev.Komentar = txtKomentar.Text;
@@ -61,12 +61,17 @@ namespace HR_Assistant
             }
             RepozitorijZahtjeva repozitorij = new RepozitorijZahtjeva();
 
-            repozitorij.DodajZahtjev(NoviZahtjev);
+            repozitorij.DodajZahtjev(NoviZahtjev, frmLogIn.UlogiranZaposlenik );
 
 
         }
 
         private void txtKomentar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtId_TextChanged(object sender, EventArgs e)
         {
 
         }

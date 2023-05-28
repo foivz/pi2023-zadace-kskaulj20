@@ -95,6 +95,11 @@ namespace HR_Assistant
             }
         }
 
+        private void txtPretrazi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         /**  private void dgvKor_Ime_CellContentClick(object sender, DataGridViewCellEventArgs e)
           {
               List<Zaposlenik> zaposlenici = RepozitorijZaposlenik.DohvatiZaposlenika(string email, string lozinka);

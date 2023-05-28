@@ -38,6 +38,8 @@
             this.btnOdustani = new System.Windows.Forms.Button();
             this.txtPocetak = new System.Windows.Forms.TextBox();
             this.txtKraj = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cboRazlog
@@ -126,11 +128,30 @@
             this.txtKraj.Size = new System.Drawing.Size(100, 22);
             this.txtKraj.TabIndex = 11;
             // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(295, 91);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(78, 22);
+            this.txtId.TabIndex = 12;
+            this.txtId.TextChanged += new System.EventHandler(this.txtId_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(292, 49);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(68, 16);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "ID zahtjev:";
+            // 
             // FrmNoviZahtjev
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(486, 617);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.txtKraj);
             this.Controls.Add(this.txtPocetak);
             this.Controls.Add(this.btnOdustani);
@@ -160,5 +181,7 @@
         private System.Windows.Forms.Button btnOdustani;
         private System.Windows.Forms.TextBox txtPocetak;
         private System.Windows.Forms.TextBox txtKraj;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.Label label5;
     }
 }

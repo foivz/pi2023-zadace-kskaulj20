@@ -147,9 +147,9 @@ namespace HR_Assistant.Repositories
         }
 
         
-        public void DodajZahtjev(Zahtjev zahtjev)
+        public void DodajZahtjev(Zahtjev zahtjev, Korisnik korisnik)
         {
-            string sql = $"INSERT INTO Zahtjev (Id_zahtjev, pocetak_odsustva, zavrsetak_odsustva, komentar, Id_korisnik, Id_vrsta, Id_status) VALUES ({ zahtjev.ID_zahtjev}, { zahtjev.Pocetak_Odsustva}, { zahtjev.KrajOdsustva}, { zahtjev.Komentar}, { zahtjev.Kreirao}, { zahtjev.RazlogOdsustva}, { zahtjev.Status})";
+            string sql = $"INSERT INTO Zahtjev (Id_zahtjev, pocetak_odsustva, zavrsetak_odsustva, komentar, Id_korisnik, Id_vrsta, Id_status) VALUES ('{zahtjev.ID_zahtjev}', '{ zahtjev.Pocetak_Odsustva}', '{ zahtjev.KrajOdsustva}', '{ zahtjev.Komentar}', '{ korisnik.Id}', '{ zahtjev.RazlogOdsustva}', '{ zahtjev.Status}')";
             //cmd.Parameters.AddWithValue("@value", dateTimeVariable);
             DB.OpenConnection();
             DB.ExecuteCommand(sql);
