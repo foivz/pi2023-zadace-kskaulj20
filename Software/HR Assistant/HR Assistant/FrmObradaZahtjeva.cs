@@ -26,10 +26,6 @@ namespace HR_Assistant
             
         }
 
-       /** public FrmObradaZahtjeva(int iD_zahtjev)
-        {
-            this.iD_zahtjev = iD_zahtjev;
-        }**/
 
         
 

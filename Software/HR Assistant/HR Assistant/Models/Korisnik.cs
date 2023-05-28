@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace HR_Assistant.Models
 {
+    /// <summary>
+    /// Klasa koja predstavlja korisnika ovog softvera. 
+    /// </summary>
     public abstract class Korisnik
     { 
        public int Id { get; set; }    

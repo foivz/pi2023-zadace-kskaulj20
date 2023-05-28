@@ -12,9 +12,15 @@ using System.Windows.Forms;
 using System.Xml.Linq;
 
 namespace HR_Assistant
+
+
 {
+   /// <summary>
+   /// Klasa koja nasljeđuje klasu zaposlenika.
+   /// </summary>
     public class Zaposlenik : Korisnik
     {
+
         
        
         public override string ToString()

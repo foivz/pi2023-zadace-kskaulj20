@@ -133,13 +133,6 @@ namespace HR_Assistant
             Close();
         }
 
-        /**  private void dgvKor_Ime_CellContentClick(object sender, DataGridViewCellEventArgs e)
-          {
-              List<Zaposlenik> zaposlenici = RepozitorijZaposlenik.DohvatiZaposlenika(string email, string lozinka);
-
-              dgvKor_Ime.DataSource = zaposlenici;
-              DataGridViewBand band = dgvKor_Ime.Rows[3];
-              band.Visible = false;
-          }**/
+        
     }
 }

@@ -11,6 +11,9 @@ namespace HR_Assistant.Repositories
 {
     public class RepozitorijZahtjeva
     {
+        /// <summary>
+        /// Metoda koja dohvaća sve neobrađene zahtjeve iz baze podataka.
+        /// </summary>
         
             public static List<Zahtjev> GetZahtjevi()
             {
@@ -30,6 +33,10 @@ namespace HR_Assistant.Repositories
                 return zahtjevi;
             }
 
+        /// <summary>
+        /// Metoda koja dohvaća sve obrađene zahtjeve iz baze podataka tako da provjerava koji im je status.
+        /// </summary>
+        /// <returns></returns>
         
             public static List<Zahtjev> GetObradeniZahtjevi()
             {
@@ -48,7 +55,10 @@ namespace HR_Assistant.Repositories
                 DB.CloseConnection();
                 return obradeni_zahtjevi;
             }
-
+        /// <summary>
+        /// Metoda koja dohvaća zahtjeve kreirane od strane korisnika koji je ulogiran u sustav.
+        /// </summary>
+        /// <returns></returns>
         public static List<Zahtjev> GetPoslaniZahtjevi()
         {
             var poslani_zahtjevi = new List<Zahtjev>();
@@ -67,6 +77,10 @@ namespace HR_Assistant.Repositories
             return poslani_zahtjevi;
         }
 
+        /// <summary>
+        /// Dohvaća vrste odsustava kako bi se oni prikazali u comboboxu.
+        /// </summary>
+        
         public static List<Zahtjev> VrsteOdsustva()
         {
             var vrste = new List<Zahtjev>();
@@ -130,6 +144,11 @@ namespace HR_Assistant.Repositories
           
         }
 
+        /// <summary>
+        /// Implementirana je kako bi se omogućilo pretraživanje zahtjeva po ID-u.
+        /// </summary>
+        /// <param name="Id_zahtjev"></param>
+      
         public static List<Zahtjev> DohvatiTrazeniZahtjev (int Id_zahtjev){
             string sql = $"SELECT * FROM Zahtjev WHERE Id_zahtjev={Id_zahtjev}";
             List<Zahtjev> trazeniZahtjevi = new List<Zahtjev> ();

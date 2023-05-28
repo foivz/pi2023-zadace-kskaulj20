@@ -18,11 +18,7 @@ namespace HR_Assistant.Repositories
             return FetchZaposlenik(sql);
         }
 
-      /**  public static Zaposlenik UserPrikaz(string Email, string Lozinka)
-        {
-            string sql = $"SELECT kor_ime FROM Korisnici WHERE email = '{Email}' AND lozinka = '{Lozinka}' ";
-            return FetchZaposlenik(sql);
-        }**/
+     
        
         private static Zaposlenik FetchZaposlenik(string sql)
         {

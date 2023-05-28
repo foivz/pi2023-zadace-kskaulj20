@@ -5,7 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace HR_Assistant.Models
+    
 {
+    /// <summary>
+    /// Klasa koja predstavlja zahtjeve za odsustvom - jedinica nad kojom se vrše operacije u ovom sustavu.
+    /// </summary>
     public class Zahtjev
     {
 
