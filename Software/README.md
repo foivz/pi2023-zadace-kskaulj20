@@ -1,3 +1,12 @@
+## Podaci za prijavu u aplikaciju
+
+Zaposlenik -> email: markan@gmail.com; lozinka: 11111
+
+Menadžer -> email: ahorvat@mail.com; lozinka: 12345
+
+-----------------------------------------------------------
+
+
 Ovo je mapa vašeg programskog koda. U nju smjestite vaše rješenje (solution) i pripadajuće mape. Kod izrade rješenja **jako je važno** prije prvog uploada dokumenata postaviti i koristiti ispravan .gitignore. Za vas smo pripremili inicijalnu verziju .gitignore dokumenta koju po potrebi možete dopuniti i doraditi, a sukladno tehnologijama koje ćete koristiti. 
 
 Uvijek uzmite u obzir da se ne verzioniraju dokumenti koje IDE kreira prilikom prevođenja ili pokretanja projekta. Također uzmite u obzir da dobro verzioniran programski kod zadovoljava dva uvjeta:
