@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Software",
+    "\\Software\\HR Assistant",
+    "\\Software\\HR Assistant\\HR Assistant"
   ],
+  "SelectedNode": "\\Software\\HR Assistant\\HR Assistant\\FrmObradaZahtjeva.cs",
   "PreviewInSolutionExplorer": false
 }
