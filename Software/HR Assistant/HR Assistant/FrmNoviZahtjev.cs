@@ -81,5 +81,13 @@ namespace HR_Assistant
         {
 
         }
+
+        private void btnOdustani_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Close();
+            FrmPrikazZahtjevaZaposlenik frmPrikazZahtjevaZaposlenik = new FrmPrikazZahtjevaZaposlenik();
+            frmPrikazZahtjevaZaposlenik.ShowDialog();
+        }
     }
 }

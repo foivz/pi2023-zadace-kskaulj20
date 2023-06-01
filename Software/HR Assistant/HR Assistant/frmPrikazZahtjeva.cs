@@ -22,19 +22,10 @@ namespace HR_Assistant
         public frmPrikazZahtjeva()
         {
             InitializeComponent();
-            //this.zahtjev = zahtjev;
-            //OdabranZahtjev = odabranZahtjev;
+       
         }
 
-       /** private void dgvZahtjevi_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-            FrmObradaZahtjeva frmObradaZahtjeva = new FrmObradaZahtjeva(OdabranZahtjev);
-            Hide();
-            frmObradaZahtjeva.ShowDialog();
-            Close();
-
-        }**/
+       
 
         private void frmPrikazZahtjeva_Load(object sender, EventArgs e)
         {
