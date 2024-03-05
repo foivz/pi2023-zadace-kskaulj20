@@ -15,7 +15,7 @@ Softver Kadrovska služba u IT poduzeću
 
 Ime i prezime | E-mail adresa (FOI) | JMBAG | Github korisničko ime
 ------------  | ------------------- | ----- | ---------------------
-Klara Škaulj | kskaulj20@student.foi.hr | 0016150270 | kskaulj20
+Klara Škaulj | kskaulj20@student.foi.hr |  | kskaulj20
 
 
 ## Opis domene
